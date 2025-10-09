@@ -9,11 +9,15 @@ lerna-debug.log*
 
 # Dependencies
 node_modules/
+client/node_modules/
+server/node_modules/
 
 # Build output
 dist/
 dist-ssr/
 build/
+client/build/
+server/dist/
 *.local
 
 # Environment files
