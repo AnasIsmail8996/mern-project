@@ -1,0 +1,124 @@
+.loginPage {
+  padding: 5rem 2rem;
+  background: #f9fafb;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  gap: 3rem;
+}
+
+.gridTwoCols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.loginImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.loginForm {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #374151;
+  text-transform: capitalize;
+}
+
+.formGroup input {
+  padding: 0.8rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background: #f9fafb;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.formGroup input:focus {
+  outline: none;
+  background: #fff;
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+}
+
+.btnSubmit {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 1.9rem 0;
+  font-size: 1.7rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btnSubmit:hover {
+  background: #1e40af;
+}
+
+/* 🌐 Responsive Design */
+@media (max-width: 900px) {
+  .gridTwoCols {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .loginImage img {
+    width: 80%;
+    margin: 0 auto 2rem;
+  }
+
+  .loginForm {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .loginPage {
+    padding: 3rem 1rem;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .formGroup input {
+    font-size: 0.95rem;
+  }
+
+  .btnSubmit {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}

@@ -1,0 +1,109 @@
+.adminSection {
+  padding: 2rem 1rem;
+  background: #f9fafb;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #222;
+}
+
+.header p {
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table thead {
+  background: #2563eb;
+  color: #fff;
+}
+
+.table th,
+.table td {
+  padding: 12px 16px;
+  font-size: 2.1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table th:first-child,
+.table td:first-child {
+  text-align: center;
+}
+
+.table tr:hover {
+  background: #f3f4f6;
+  transition: 0.2s ease-in-out;
+}
+
+.editBtn,
+.deleteBtn {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  color: hsl(0, 0%, 100%);
+  transition: all 0.2s ease;
+}
+
+.editBtn {
+  background: #99ada7;
+}
+
+.editBtn:hover {
+  background: #626564;
+}
+
+.deleteBtn {
+  background: #c29d9d;
+}
+
+.deleteBtn:hover {
+  background: #c35050;
+}
+
+.noData {
+  text-align: center;
+  color: #777;
+  padding: 1.5rem 0;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .editBtn,
+  .deleteBtn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
