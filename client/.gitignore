@@ -3,22 +3,19 @@ logs
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
 
-# Dependencies
+# Node modules
 node_modules/
-client/node_modules/
-server/node_modules/
+front-end/node_modules/
+back-end/node_modules/
 
 # Build output
 dist/
-dist-ssr/
 build/
-client/build/
-server/dist/
-*.local
+front-end/dist/
+front-end/build/
+back-end/dist/
 
 # Environment files
 .env
@@ -26,36 +23,16 @@ server/dist/
 .env.*.local
 !.env.example
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea/
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-# Caches and temp files
-.cache/
-.tmp/
-
-# OS files
-Thumbs.db
-ehthumbs.db
-Icon?
-desktop.ini
-
-# Vite and TypeScript
+# Vite cache
 .vite/
 *.tsbuildinfo
 
-# Lock files (optional)
-# Uncomment the one you use
-# package-lock.json
-# yarn.lock
-# pnpm-lock.yaml
+# Editor directories
+.vscode/*
+.idea/
+.DS_Store
 
-# Optional for SVN users
-# .svn/
+# OS files
+Thumbs.db
+desktop.ini
+Icon?

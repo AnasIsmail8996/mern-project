@@ -12,7 +12,7 @@ const Navbar = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.logoBrand}>
-          <a href="/">Anas Ismail</a>
+          <a href="/">Brand's Hospital</a>
         </div>
 
         <button
@@ -26,16 +26,16 @@ const Navbar = () => {
         <nav className={`${styles.nav} ${menuOpen ? styles.active : ""}`}>
           <ul className={styles.navList}>
             <li><NavLink to="/" onClick={() => setMenuOpen(false)}>Home</NavLink></li>
-            <li><NavLink to="/about" onClick={() => setMenuOpen(false)}>About</NavLink></li>
-            <li><NavLink to="/contact" onClick={() => setMenuOpen(false)}>Contact</NavLink></li>
-            <li><NavLink to="/services" onClick={() => setMenuOpen(false)}>Services</NavLink></li>
+            <li><NavLink to="/about" onClick={() => setMenuOpen(false)}>Health</NavLink></li>
+            <li><NavLink to="/contact" onClick={() => setMenuOpen(false)}>Book Appointment</NavLink></li>
+            <li><NavLink to="/services" onClick={() => setMenuOpen(false)}>Doctors</NavLink></li>
 
             {isLoggedIn ? (
               <li>
                 <NavLink
                   to="/"
                   onClick={() => {
-                    logoutUser();   // 🧠 this is key!
+                    logoutUser();  
                     setMenuOpen(false);
                   }}
                 >

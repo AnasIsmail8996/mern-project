@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Register.module.css';
-import image from "/images/login.jpg";
+import image from "../images/0e6818c3ec650461cf809ad87b707b94.png";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../store/Auth';

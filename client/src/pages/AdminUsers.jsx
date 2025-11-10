@@ -22,7 +22,7 @@ const AdminUsers = () => {
       console.log(response.data, "users data fetched");
       const responseData=response.data;
       if(responseData){
-        toast.success("All Users Fetching Data")
+        
         setUserData(responseData);
 
       }
@@ -68,8 +68,8 @@ const AdminUsers = () => {
   return (
     <section className={styles.adminSection}>
       <div className={styles.header}>
-        <h1>👥 Admin Users Dashboard</h1>
-        <p>Manage all registered users from one place</p>
+        <h1>👥 Admin Patients Dashboard</h1>
+        <p>Manage all registered Patients from one place</p>
       </div>
 
       <div className={styles.tableWrapper}>

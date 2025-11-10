@@ -98,8 +98,19 @@ try {
 } catch (error) {
     console.log(error.message);
     
+
 }
 }
 
+ const verifyAdminKey = (req, res) => {
+  const { adminKey } = req.body;
 
-export  { home, register, login, user };
+  if (adminKey === process.env.ADMIN_PRIVATE_KEY) {
+    return res.status(200).json({ success: true });
+  }
+  return res.status(401).json({ success: false, message: "Invalid key" });
+};
+
+
+
+export  { home, register, login, user, verifyAdminKey };

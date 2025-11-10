@@ -22,18 +22,35 @@
 .heroContent {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.2rem;
+  text-align: left; 
+  max-width: 550px;
 }
 
 .heroContent h1 {
   font-size: 2.5rem;
   color: #111827;
 }
+.heroContent h2 {
+  font-size: 1.8rem;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.heroContent {
+  text-align: center;
+  align-items: center;
+  gap: 3.6rem;
+  margin: 0 auto;
+}
+
 
 .heroContent p {
   color: #4b5563;
-  line-height: 1.6;
+  line-height: 1.8;
+  font-size: 1.9rem;
 }
+
 
 .heroImage img {
   width: 100%;

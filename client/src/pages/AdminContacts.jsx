@@ -19,7 +19,7 @@ const AdminContacts = () => {
       console.log("Fetched contacts:", resData);
 
       if (response.status === 200 || response.status === 201) {
-        // ✅ If API wraps data inside .data, handle it safely
+  
         setContactData(Array.isArray(resData) ? resData : resData.data || []);
         toast.success("User data fetched successfully!");
       } else {
@@ -44,7 +44,7 @@ const AdminContacts = () => {
       if (response.status === 200 || response.status === 201) {
         
         setContactData((prev) => prev.filter((contact) => contact._id !== id));
-        toast.success("Contact deleted successfully!");
+        
       } else {
         toast.warn("Failed to delete contact!");
       }
@@ -65,32 +65,37 @@ const AdminContacts = () => {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.heading}>📬 Admin Contacts</h2>
+      <h2 className={styles.heading}>📬 Doctors See Appointment</h2>
 
       <div className={styles.cardGrid}>
         {contactData.length > 0 ? (
-          contactData.map(({ username, email, message, _id }, index) => (
-            <div key={_id || index} className={styles.card}>
-              <div className={styles.cardHeader}>
-                <h3>
-                  <FaUserAlt className={styles.icon} /> {username}
-                </h3>
-                <p className={styles.email}>
-                  <FaEnvelope className={styles.icon} /> {email}
-                </p>
-              </div>
+          contactData.map(({  username, email, message, doctor, appointmentDate, _id  }, index) => (
+           <div key={_id || index} className={styles.card}>
+  <div className={styles.cardHeader}>
+    <h3><FaUserAlt className={styles.icon} /> {username}</h3>
 
-              <p className={styles.message}>
-                <FaCommentDots className={styles.icon} /> {message}
-              </p>
+    <p className={styles.email}>
+      <FaEnvelope className={styles.icon} /> {email}
+    </p>
 
-              <button
-                className={styles.deleteBtn}
-                onClick={() => deleteContactByID(_id)}
-              >
-                <FaTrashAlt className={styles.icon} /> Delete
-              </button>
-            </div>
+    <p className={styles.doctor}>
+      🩺 Doctor: <strong>{doctor}</strong>
+    </p>
+
+    <p className={styles.date}>
+      📅 Appointment: {new Date(appointmentDate).toLocaleDateString()}
+    </p>
+  </div>
+
+  <p className={styles.message}>
+    <FaCommentDots className={styles.icon} /> {message}
+  </p>
+
+  <button className={styles.deleteBtn} onClick={() => deleteContactByID(_id)}>
+    <FaTrashAlt className={styles.icon} /> Delete
+  </button>
+</div>
+
           ))
         ) : (
           <p>No contacts found.</p>

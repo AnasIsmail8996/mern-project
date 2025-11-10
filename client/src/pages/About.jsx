@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './About.module.css';
-import aboutImage from "/images/ecommerce-4.png";
-
+import aboutImage from "../images/dcdabd2322d442ee50aff70e49c2f8d3.png";
 
 const About = () => {
   return (
@@ -10,25 +9,26 @@ const About = () => {
 
         {/* Left side image */}
         <div className={styles.aboutImage}>
-          <img src={aboutImage} alt="About Project" width="500" height="500" />
+          <img src={aboutImage} alt="About Project" width="300" height="300" />
         </div>
 
         {/* Right side text */}
         <div className={styles.aboutContent}>
-          <p>This is my MERN Stack learning demo project.</p>
+          <p>Welcome to Brand's Hospital — your trusted healthcare partner.</p>
           <h1>
-            I'm <strong>(Anas Ismail)</strong> building full-stack apps using MongoDB, Express, React, and Node.js.
+            If you're not feeling well or need to consult a doctor, 
+            you can easily book an appointment online and get the care you deserve.
           </h1>
 
           <p>
-            I'm currently learning backend integration with Express and MongoDB.
-            This project helps me understand how frontend and backend communicate.
-            You can explore my work, visit other pages, and share your feedback.
+            Our professional doctors are here to listen, guide, and help you feel better.
+            Whether it’s a routine check-up or a specific concern, we’re just one click away.
+            Take care of your health — start your recovery journey with us today.
           </p>
 
           <div className={styles.btnGroup}>
-            <a href="/contact"><button className={styles.btn}>Connect Now</button></a>
-            <a href="/services"><button className={`${styles.btn} ${styles.secondaryBtn}`}>Learn More</button></a>
+            <a href="/contact"><button className={styles.btn}>Book Appointment</button></a>
+            <a href="/services"><button className={`${styles.btn} ${styles.secondaryBtn}`}>Meet Our Doctors</button></a>
           </div>
         </div>
 

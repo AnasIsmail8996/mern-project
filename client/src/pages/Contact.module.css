@@ -86,6 +86,37 @@
   background: #1e40af;
 }
 
+.booked {
+  background: #94a19d; 
+  cursor: not-allowed;
+}
+
+.booked:hover {
+  background: #686178; 
+}
+
+.formGroup select {
+  padding: 0.95rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 2.1rem;
+  background: #f9fafb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  appearance: none; 
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236b7280' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-position: calc(100% - 0.8rem) center;
+}
+
+.formGroup select:focus {
+  outline: none;
+  border-color: #2563eb;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+}
+
 /* 🌐 Responsive Design */
 @media (max-width: 900px) {
   .contactRow {

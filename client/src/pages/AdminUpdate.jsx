@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useAuth } from "../store/Auth";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import styles from "./AdminUpdate.module.css"; 
 
 const AdminUpdate = () => {
@@ -15,7 +15,7 @@ console.log(data, 'data');
 
   const { AuthorizationToken, API } = useAuth();
   const params = useParams();
-
+  const navigate = useNavigate();
 
   const getSingleUserData = async () => {
     try {
@@ -68,7 +68,7 @@ const handleSubmit = async (event) => {
 
   try {
     const response = await axios.patch(
-      `http://localhost:3000/api/admin/users/update/${params.id}`,
+      `${API}/api/admin/users/update/${params.id}`,
       data,
       {
         headers: {
@@ -81,6 +81,7 @@ const handleSubmit = async (event) => {
     
     if (response.status === 200 || response.status === 201) {
       toast.success("User updated successfully!");
+      navigate("/admin/users");
     }
   } catch (error) {
     toast.error(error.response?.data?.message || error.message || "Error submitting data");
@@ -91,7 +92,7 @@ const handleSubmit = async (event) => {
   return (
     <section className={styles.sectionUpdate}>
       <div className={styles.container}>
-        <h1 className={styles.mainHeading}>Update User Data</h1>
+        <h1 className={styles.mainHeading}>Update Patient Data</h1>
 
         <div className={styles.formWrapper}>
           <form  className={styles.form} onSubmit={handleSubmit}>
@@ -132,7 +133,7 @@ const handleSubmit = async (event) => {
             </div>
 
             <button type="submit" className={styles.btn}>
-              Update User
+              Update Patients Data
             </button>
           </form>
         </div>

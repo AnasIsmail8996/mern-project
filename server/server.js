@@ -28,7 +28,8 @@ app.use(express.urlencoded({ extended : true}))
 app.use("/api/auth", authRouter);       
 app.use("/api/form", contactRouter);     
 app.use("/api/data", serviceRouter);     
-app.use("/api/admin", adminRouter);     
+app.use("/api/admin", adminRouter);
+     
 app.use(errorMiddleware)
 
 connectDB().then(() => {

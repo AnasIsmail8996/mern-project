@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./Home.module.css";
-import image from "/images/ecommerce-2.png";
-import image1 from "/images/e-commerce.gif";
+import image from "../images/92d4b2ad855e6c0e03902ecd695c7739.png";
+import image1 from "../images/0e6818c3ec650461cf809ad87b707b94.png";
+
 import {useAuth} from "../store/Auth.jsx"
 const Home = () => {
   const { user }=useAuth();
@@ -14,32 +15,32 @@ const Home = () => {
         <section className={styles.sectionHero}>
           <div className={`${styles.container} ${styles.gridTwoCols}`}>
             <div className={styles.heroContent}>
-              <p>This is my Mern stack Project</p>
+              <h1>This is  Brand's Hospital</h1>
             <h1>
         {user
-          ? <>Welcome <span style={{ color: "#00bcd4" }}>{user.username}</span> To my MERN Stack Project</>
-          : <>Welcome To my MERN Stack Project</>}
+          ? <>Welcome <span style={{ color: "#00bcd4" }}>{user.username}</span> To Brand's Hospital</>
+          : <>Brand's Hospital</>}
       </h1>
                   
-              <p>
-                Are you ready to see this project? It’ll be awesome if you visit and
-                share your ideas in a message.
-              </p>
+         <p>
+  Ready to meet our amazing doctors? We’d love to help you — feel free to visit
+  and share your health concerns with our caring medical team.
+</p>
 
               <div className={styles.btnGroup}>
                 <a href="/contact">
-                  <button className={styles.btn}>Connect Now</button>
+                  <button className={styles.btn}>Book Appointment</button>
                 </a>
                 <a href="/services">
                   <button className={`${styles.btn} ${styles.secondaryBtn}`}>
-                    Learn Now
+                  Meet Our Doctors
                   </button>
                 </a>
               </div>
             </div>
 
             <div className={styles.heroImage}>
-              <img src={image} alt="Ecommerce" width="500" height="500" />
+              <img src={image} alt="Doctor Image" width="500" height="500" />
             </div>
           </div>
         </section>
@@ -51,26 +52,25 @@ const Home = () => {
               <img src={image1} alt="Demo" width="500" height="500" />
             </div>
 
-            <div className={styles.heroContent}>
-              <p>This is For my Learning Demo Project</p>
-              <h1>You can also send a message on the contact form</h1>
+              <div className={styles.heroContent}>
+                <h1>This is  Brand's Hospital</h1>
+              <h1>🏥 “ Schedule your appointment <br /> with our professional doctors anytime. ”</h1>
+                <p>
+                  Are you ready to see this project? It’ll be awesome if you visit and
+                  share your ideas in a message.
+                </p>
 
-              <p>
-                Are you ready to see this project? It’ll be awesome if you visit and
-                share your ideas in a message.
-              </p>
-
-              <div className={styles.btnGroup}>
-                <a href="/contact">
-                  <button className={styles.btn}>Connect Now</button>
-                </a>
-                <a href="/services">
-                  <button className={`${styles.btn} ${styles.secondaryBtn}`}>
-                    Learn Now
-                  </button>
-                </a>
+                <div className={styles.btnGroup}>
+                  <a href="/contact">
+                    <button className={styles.btn}> Book Appointment </button>
+                  </a>
+                  <a href="/services">
+                    <button className={`${styles.btn} ${styles.secondaryBtn}`}>
+                     Meet Our Doctors
+                    </button>
+                  </a>
+                </div>
               </div>
-            </div>
           </div>
         </section>
       </main>

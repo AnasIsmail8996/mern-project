@@ -6,6 +6,7 @@ import { FaUser, FaRegListAlt, FaHome } from "react-icons/fa";
 import { FaMessage } from "react-icons/fa6";
 import { useAuth } from "../../store/Auth";
 import { toast } from "react-toastify";
+import AdminContacts from "../../pages/AdminContacts";
 
 const AdminLayout = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,7 +36,7 @@ const AdminLayout = () => {
       <header className={styles.header}>
         <div className={styles.container}>
           <div className={styles.logoBrand}>
-            <a href="/">Admin Panel</a>
+            <a href="/">Doctors Panel</a>
           </div>
 
           <button
@@ -48,15 +49,15 @@ const AdminLayout = () => {
 
           <nav className={`${styles.nav} ${menuOpen ? styles.active : ""}`}>
             <ul className={styles.navList}>
-              <li><NavLink to="/admin/users" onClick={() => setMenuOpen(false)}><FaUser /> Users</NavLink></li>
-              <li><NavLink to="/admin/contacts" onClick={() => setMenuOpen(false)}><FaMessage /> Contact</NavLink></li>
-              <li><NavLink to="/services" onClick={() => setMenuOpen(false)}><FaRegListAlt /> Services</NavLink></li>
+              <li><NavLink to="/admin/users" onClick={() => setMenuOpen(false)}><FaUser /> Patients List</NavLink></li>
+              <li><NavLink to="/admin/contacts" onClick={() => setMenuOpen(false)}><FaMessage /> Appointments</NavLink></li>
+              <li><NavLink to="/services" onClick={() => setMenuOpen(false)}><FaRegListAlt /> Our Doctors</NavLink></li>
               <li><NavLink to="/" onClick={() => setMenuOpen(false)}><FaHome /> Home</NavLink></li>
             </ul>
           </nav>
         </div>
       </header>
-
+      
       <Outlet />
     </>
   );
